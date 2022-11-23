@@ -4,12 +4,9 @@ import {
   Switch,
   Route,
   useRouteMatch, 
-  useParams,
   Link
 } from "react-router-dom";
 import axios from "axios";
-// Body Background Images
-
 // Content Images
 import moonImage from "../assets/destination/image-moon.png";
 import marsImage from "../assets/destination/image-mars.png";
@@ -21,7 +18,7 @@ import Deimage from './destination-components/Deimage';
 
 
 export default function Destinations() {
-  let {url, path} = useRouteMatch();
+  let {path} = useRouteMatch();
   const [destination, setDestination] = useState([{}]);
   
   useEffect(() => {
