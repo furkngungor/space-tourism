@@ -1,0 +1,165 @@
+.Header {
+  width: 100%;
+  height: 75px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.Header .container {
+  justify-content: space-between;
+}
+
+.Header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.Header-logo img {
+  width: 38px;
+  height: 38px;
+}
+
+.Header .container hr {
+  display: none;
+}
+
+.Header-hamburger-button {
+  border: 0;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Header-menu {
+  height: 100vh;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transform: translateX(0%);
+  opacity: 0;
+  transition: 0.2s;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(97, 97, 97, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  visibility: hidden;
+  z-index: 2;
+}
+
+.Header-menu-link {
+  text-decoration: none;
+  color: white;
+  margin-top: 30px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.Header-menu-link:nth-of-type(1)::before {
+  content: "00";
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.Header-menu-link:nth-of-type(2)::before {
+  content: "01";
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.Header-menu-link:nth-of-type(3)::before {
+  content: "02";
+  font-weight: 700;
+  margin-right: 8px;
+}
+.Header-menu-link:nth-of-type(4)::before {
+  content: "03";
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.Header-close-button {
+  height: 75px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  margin-bottom: 100px;
+  border: 0;
+  background-color: transparent;
+}
+
+.Header-close-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.show-menu {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* for Desktop */
+
+@media (width>=992px) {
+  .Header {
+    width: 100%;
+    height: 75px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+
+  .Header-logo {
+    margin-left: 40px;
+  }
+
+  .Header-menu {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    visibility: visible;
+  }
+
+  .Header .container hr {
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    margin-top: 0;
+    width: 45vw;
+    top: 57px;
+    left: 8.5%;
+  }
+
+  .Header-menu-link {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 0;
+  }
+
+  .Header-menu-link:hover {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid white;
+  }
+
+  .Header-hamburger-button {
+    display: none;
+  }
+
+  .active {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid white;
+  }
+}

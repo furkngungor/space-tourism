@@ -1,0 +1,200 @@
+@import "normalize.css";
+@import "fonts.css";
+@import "header.css";
+
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
+  color: white;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.Destination {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.Destination .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.Destination-planet {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Destination-planet-content h2 {
+  text-transform: uppercase;
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.Destination-planet-image {
+  width: 170px;
+  height: 170px;
+  margin-top: 20px;
+  margin-left: 12%;
+}
+
+.Destination-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.Destination-navigation-button {
+  height: 30px;
+  font-family: 'Barlow Condensed';
+  font-size: 14px;
+  font-style: normal;
+  line-height: 17px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top: 3px solid transparent;
+}
+
+.Destination-navigation a:hover {
+  border-bottom: 3px solid white;
+}
+
+
+.Destination-planet-description {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.Destination-planet-description h5 {
+  text-align: center;
+  color:  #D0D6F9;
+}
+
+.Destination-planet-description h3 {
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+
+
+/* for Desktop */
+
+@media (width>=992px) {
+  body {
+    max-width: 1440px;
+    max-height: 990px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .Destination {
+    padding-top: 0px;
+    padding-left: 8.5%;
+    padding-right: 8.5%;
+    margin-top: 30px;
+  }
+
+  .Destination .container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .Destination-planet {
+    position: relative;
+    width: 50%;
+  }
+
+  .Destination-planet h6 {
+    position: relative;
+  }
+
+  .align-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Destination-planet-image {
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+  }
+
+  .Destination-planet-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .Destination-planet-content h2 {
+    font-size: 100px;
+    line-height: 115px;
+    text-align: left;
+  }
+
+  .Destination-navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .Destination-navigation a:first-child {
+    margin-left: 0px;
+  }
+ 
+  .Destination-planet-description {
+    width: 50%;
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  .Destination-planet-description h5 {
+    text-align: left;
+  }
+  
+  .Destination-planet-description h3 {
+    text-align: left;
+  }
+
+  .Destination-planet-description-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
