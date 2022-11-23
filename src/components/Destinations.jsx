@@ -25,7 +25,7 @@ export default function Destinations() {
   const [destination, setDestination] = useState([{}]);
   
   useEffect(() => {
-    axios.get("./data.json").then(res => {
+    axios.get("https://raw.githubusercontent.com/furkngungor/space-tourism/gh-pages/data.json").then(res => {
       setDestination(res.data.destinations);
     }).catch(err => {
       console.log(err);

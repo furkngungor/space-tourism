@@ -40,7 +40,7 @@ export default function Technology() {
   },);
 
   useEffect(() => {
-    axios.get("./data.json").then(res => {
+    axios.get("https://raw.githubusercontent.com/furkngungor/space-tourism/gh-pages/data.json").then(res => {
       setTechData(res.data.technology);
     }).catch(err => {
       console.log(err);
