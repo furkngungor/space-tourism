@@ -17,7 +17,6 @@ function App() {
   let {path, url} = useRouteMatch();
   const location = useLocation().pathname;
   const newClass = location.split("/")[1];
-  console.log(url);
   return (
     <div className={"page " + ("page-" + newClass)}>
         <Header />
